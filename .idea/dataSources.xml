@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="985337832">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - blankLight-1-3.mbtiles" uuid="64275a32-e123-4ce2-b06e-ed49f2fd61e1">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/blankLight-1-3.mbtiles</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Sqlite (Xerial) - blankDark-1-3.mbtiles" uuid="217bf811-beec-4f0a-b62c-e1c719f02387">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/blankDark-1-3.mbtiles</jdbc-url>
+    </data-source>
+  </component>
+</project>

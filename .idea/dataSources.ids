@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - blankLight-1-3.mbtiles" uuid="64275a32-e123-4ce2-b06e-ed49f2fd61e1">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+  </data-source>
+  <data-source name="Sqlite (Xerial) - blankDark-1-3.mbtiles" uuid="217bf811-beec-4f0a-b62c-e1c719f02387">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="grid_data" schema="" catalog="" type="VIEW">
+      <column name="zoom_level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_column" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_row" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="key_name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="key_json" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="grid_key" schema="" catalog="" type="TABLE">
+      <column name="grid_id" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="key_name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="grid_key_lookup" unique="true" columns="grid_id,key_name"/>
+    </table>
+    <table name="grid_utfgrid" schema="" catalog="" type="TABLE">
+      <column name="grid_id" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="grid_utfgrid" sqlType="BLOB" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="grid_utfgrid_lookup" unique="true" columns="grid_id"/>
+    </table>
+    <table name="grids" schema="" catalog="" type="VIEW">
+      <column name="zoom_level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_column" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_row" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="grid" sqlType="BLOB" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="images" schema="" catalog="" type="TABLE">
+      <column name="tile_data" sqlType="BLOB" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="tile_id" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="images_id" unique="true" columns="tile_id"/>
+    </table>
+    <table name="keymap" schema="" catalog="" type="TABLE">
+      <column name="key_name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="key_json" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="keymap_lookup" unique="true" columns="key_name"/>
+    </table>
+    <table name="map" schema="" catalog="" type="TABLE">
+      <column name="zoom_level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_column" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_row" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_id" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="grid_id" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="map_index" unique="true" columns="zoom_level,tile_column,tile_row"/>
+    </table>
+    <table name="metadata" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="tiles" schema="" catalog="" type="VIEW">
+      <column name="zoom_level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_column" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_row" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="tile_data" sqlType="BLOB" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+</component>
